@@ -14,8 +14,10 @@ var AppSorteio = React.createClass({displayName: "AppSorteio",
 	    request.open('GET', url);
 	    request.onload = function() {
 		    if (request.status >= 200 && request.status < 400){
-		         var dados = JSON.parse(request.responseText);
-		         console.log(dados);			 
+		        var dados = JSON.parse(request.responseText),
+		        	posit = Math.floor(Math.random() * dados.length),
+		            name  = dados[posit].FIELD1;
+		            document.querySelector('p').innerHTML = name;
 			 }else {
 			    console.log('Erro on request', dados);
 		    }
