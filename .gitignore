@@ -1,1 +1,7 @@
 node_modules/
+.DS_Store
+app/.DS_Store
+app/public/.DS_Store
+app/public/assets/.DS_Store
+app/public/assets/js/.DS_Store
+npm-debug.log
